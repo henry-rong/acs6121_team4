@@ -2,10 +2,10 @@
 https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_navigation/launch/turtlebot3_navigation.launch
 -->
 <launch>
-  <include file="$(find tuos_simulations)/launch/nav_world.launch" />
+  <include file="$(find acs6121)/launch/arena.launch" />
 
   <!-- To be modified -->
-  <arg name="map_file" default=" $(find acs6121_team4)/maps/map1.yaml"/>
+  <arg name="map_file" default="$(find acs6121)/maps/map1.yaml"/>
   <arg name="initial_pose_x" default="0.0"/>
   <arg name="initial_pose_y" default="0.0"/>
 
