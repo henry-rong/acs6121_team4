@@ -48,4 +48,7 @@ https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_navigation/laun
   <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
   </include>
 
+  <include file="$(find explore_lite)/launch/explore.launch">
+  </include>
+
 </launch>
