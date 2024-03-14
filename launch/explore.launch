@@ -5,10 +5,11 @@ https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_navigation/laun
   <include file="$(find acs6121)/launch/arena.launch" />
 
   <!-- To be modified 
-  <arg name="map_file" default="$(find acs6121)/maps/map1.yaml"/>
+    <arg name="map_file" default="$(find acs6121)/maps/map1.yaml"/>
+  -->
   <arg name="initial_pose_x" default="0.0"/>
   <arg name="initial_pose_y" default="0.0"/>
-  -->
+  
 
   <!-- Other arguments -->
   <arg name="initial_pose_a" default="0.0"/>
@@ -26,13 +27,12 @@ https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_navigation/laun
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
   -->
 
-  <!-- AMCL 
+  <!-- AMCL -->
   <include file="$(find turtlebot3_navigation)/launch/amcl.launch">
     <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
     <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
     <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
   </include>
-  -->
 
   <!-- move_base -->
   <include file="$(find turtlebot3_navigation)/launch/move_base.launch">
