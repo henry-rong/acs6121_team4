@@ -66,7 +66,7 @@ class Explorer():
 
         while not self.ctrl_c: 
 
-            if visit_no == 4:
+            if visit_no == len(locations):
                 visit_no = 0
 
             self.pub.publish(set_position(coordinate,locations[visit_no][0],locations[visit_no][1]))
