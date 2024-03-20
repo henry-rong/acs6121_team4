@@ -41,11 +41,14 @@ https://github.com/ROBOTIS-GIT/turtlebot3/blob/master/turtlebot3_navigation/laun
   </include>
 
   <!-- rviz
-  <node pkg="rviz" type="rviz" name="rviz" required="true"
+  <node pkg="rviz" type="rv iz" name="rviz" required="true"
     args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_navigation.rviz"/>
    -->
 
   <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
   </include>
+
+  <node pkg="acs6121" type="explore.py" name="explore" output="screen">
+  </node>
 
 </launch>
